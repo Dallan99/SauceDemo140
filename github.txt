@@ -7,4 +7,8 @@ O que é um repositório?
 
  www.github.com --> empresa adquirida pela Microsoft
 
+Configuração do Github -->
+git config --global user.name "Dalln99"
+git config --global user.email "dallanr@gmail.com"
+
  
