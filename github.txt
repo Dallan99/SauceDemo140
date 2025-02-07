@@ -1,0 +1,10 @@
+O que é um repositório?
+ - Serviço que armazena com segurança tudo que produzimos--> Cofre
+ - Possui um controle de acesso --> dar e remover permissoes para convidados
+ - Possui um controle de versão --> maquina do tempo
+
+ Serve como um portifólio
+
+ www.github.com --> empresa adquirida pela Microsoft
+
+ 
