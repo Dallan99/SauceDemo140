@@ -26,5 +26,15 @@ class Teste_Produtos():
 
         assert self.driver.find_element(By.CSS_SELECTOR, ".title").text == "Products"  # confirma se está escrito Products no elemento
         assert self.driver.find_element(By.ID, "item_4_title_link").text == "Sauce Labs Backpack" # confirma se é a mochila
-        # confirma o preço da mochila
-        assert self.driver.find_element(By.CSS_SELECTOR, ".inventory_item:nth-child(1) .inventory_item_price").text == "$29.99" 
+        assert self.driver.find_element(By.CSS_SELECTOR, ".inventory_item:nth-child(1) .inventory_item_price").text == "$29.99" # confirma o preço da mochila
+        assert self.driver.find_element(By.ID, "add-to-cart-sauce-labs-backpack").text == "Add to cart" # confirma o botão de adicionar ao carrinho
+        self.driver.find_element(By.ID, "add-to-cart-sauce-labs-backpack").click() # clica no botão de adicionar ao carrinho
+        assert self.driver.find_element(By.ID, "shopping_cart_container").text == "1" # confirma se o carrinho tem 1 item
+        self.driver.find_element(By.ID, "shopping_cart_container").click() # clica no carrinho
+
+        assert self.driver.find_element(By.CSS_SELECTOR, ".title").text == "Your Cart" # confirma se o carrinho tem 1 item
+        assert self.driver.find_element(By.ID, "item_4_title_link").text == "Sauce Labs Backpack" # confirma se é a mochila
+        assert self.driver.find_element(By.CLASS_NAME, "inventory_item_price").text == "$29.99"# confirma o preço da mochila
+        self.driver.find_element(By.ID, "remove-sauce-labs-backpack").click() # clica no botão de remover da mochila
+        self.driver.find_element(By.ID, "react-burger-menu-btn").click() # abre o menu lateral
+        self.driver.find_element(By.ID, "logout_sidebar_link").click() # clica no botão de sair
